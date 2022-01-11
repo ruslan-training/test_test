@@ -1914,6 +1914,48 @@ h2:before {
   font-weight: 700;
   color: #00A6FF;
 }
+.call-back__button {
+  max-width: 20rem;
+  width: 100%;
+  border-radius: 1.875rem;
+  background: linear-gradient(180deg, #0095E5 0%, #00A6FF 100%);
+  font-weight: 900;
+  line-height: 1.1875rem;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 0.9375rem 3.5625rem;
+  transition: all 0.6s ease 0s;
+}
+@media (min-width: 68.75em) {
+  .call-back__button {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 68.75em) {
+  .call-back__button {
+    font-size: clamp( 0.75rem , 0.15rem  +  1.6vw , 1.25rem );
+  }
+}
+@media (max-width: 37.5em) {
+  .call-back__button {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .call-back__button {
+    margin-left: 6.25rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .call-back__button {
+    margin-left: clamp( 0.9375rem , -9.6875rem  +  28.3333333333vw , 6.25rem );
+  }
+}
+@media (max-width: 37.5em) {
+  .call-back__button {
+    margin-left: 0.9375rem;
+  }
+}
 
 .call-back h2 {
   position: relative;

@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220111210924">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220111210924" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220111225446">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220111225446" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -59,7 +59,7 @@
 									<input type="text" class="dropdown__input" placeholder="ГДЕ ПОДКЛЮЧАЕМ ?" readonly>
 									<div class="dropdown__option">
 										<div class="dropdown__item">ГДЕ ПОДКЛЮЧАЕМ ?</div>
-										<div class="dropdown__item">ЧАСТНЫЙ ДОМ</div>
+										<div class="dropdown__item" onclick="show('ЧАСТНЫЙ ДОМ')">ЧАСТНЫЙ ДОМ</div>
 										<div class="dropdown__item">КВАРТИРА</div>
 										<div class="dropdown__item">ОФИС</div>
 									</div>
@@ -100,12 +100,10 @@
 			</section>
 			<section class="about-us">
 				<div class="page__container">
-					<div class="about-us__bg-box">
-						<div class="about-us__body">
-							<h2>мы</h2>
-							<div class="about-us__text">
-								АГРЕГАТОР. ВАШ ПОМОЩНИК.<br> ПРОВЕРЯЕМ НАЛИЧИЕ ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ.<br> ПОДБИРАЕМ ПОД ВАШИ ПОТРЕБНОСТИ ТАРИФНЫЙ ПЛАН.<br> ОФОРМЛЯЕМ ОБРАЩЕНИЕ НА ПОДКЛЮЧЕНИЕ.<br> СОГЛАСОВЫВАЕМ С ВАМИ ДЕНЬ И ВРЕМЯ ПОДКЛЮЧЕНИЯ.
-							</div>
+					<div class="about-us__body">
+						<h2>мы</h2>
+						<div class="about-us__text">
+							АГРЕГАТОР. ВАШ ПОМОЩНИК.<br> ПРОВЕРЯЕМ НАЛИЧИЕ ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ.<br> ПОДБИРАЕМ ПОД ВАШИ ПОТРЕБНОСТИ ТАРИФНЫЙ ПЛАН.<br> ОФОРМЛЯЕМ ОБРАЩЕНИЕ НА ПОДКЛЮЧЕНИЕ.<br> СОГЛАСОВЫВАЕМ С ВАМИ ДЕНЬ И ВРЕМЯ ПОДКЛЮЧЕНИЯ.
 						</div>
 					</div>
 				</div>
@@ -217,56 +215,54 @@
 			</section>
 			<section class="partners">
 				<div class="page__container">
-					<div class="partners__bg-box">
-						<div class="partners__body">
-							<h2>С НАМИ, ПРОВАЙДЕРЫ</h2>
-							<div class="partners__icons">
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-								<a href="#" class="partners__icon">
-									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-								</a>
-							</div>
-							<div class="partners__slider swiper">
-								<div class="partners__wrapper swiper-wrapper">
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
-									<div class="partners__slide swiper-slide">
-										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
-									</div>
+					<div class="partners__body">
+						<h2>С НАМИ, ПРОВАЙДЕРЫ</h2>
+						<div class="partners__icons">
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+							<a href="#" class="partners__icon">
+								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
+							</a>
+						</div>
+						<div class="partners__slider swiper">
+							<div class="partners__wrapper swiper-wrapper">
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
 								</div>
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+								</div>
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+								</div>
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+								</div>
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+								</div>
+								<div class="partners__slide swiper-slide">
+									<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+								</div>
 							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
 						</div>
 					</div>
 				</div>
@@ -294,39 +290,37 @@
 			</section>
 			<section class="call-back">
 				<div class="page__container">
-					<div class="call-back__bg-box">
-						<div class="call-back__body">
-							<h2>ОБРАТНЫЙ ЗВОНОК</h2>
-							<div class="call-back__form-block">
-								<div class="call-back__text">
-									НЕТ ВРЕМЕНИ ВЫБИРАТЬ?<br>
-									НЕОБХОДИМО СРОЧНОЕ ПОДКЛЮЧЕНИЕ?<br>
-									ОСТАВЬТЕ ОБРАЩЕНИЕ,<br>
-									МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ <span>30 МИНУТ.</span><br>
-									В ИНОМ СЛУЧАЕ — <a href="#"> МЕСЯЦ В ПОДАРОК!</a>
-								</div>
-								<div class="main__form-block">
-									<form action="post">
-										<div class="main__input-short-block">
-											<div class="main__input _name">
-												<input type="text" placeholder="ИМЯ">
-											</div>
-											<div class="main__input _tel-number">
-												<input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
-											</div>
+					<div class="call-back__body">
+						<h2>ОБРАТНЫЙ ЗВОНОК</h2>
+						<div class="call-back__form-block">
+							<div class="call-back__text">
+								НЕТ ВРЕМЕНИ ВЫБИРАТЬ?<br>
+								НЕОБХОДИМО СРОЧНОЕ ПОДКЛЮЧЕНИЕ?<br>
+								ОСТАВЬТЕ ОБРАЩЕНИЕ,<br>
+								МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ <span>30 МИНУТ.</span><br>
+								В ИНОМ СЛУЧАЕ — <a href="#"> МЕСЯЦ В ПОДАРОК!</a>
+							</div>
+							<div class="main__form-block">
+								<form action="post">
+									<div class="main__input-short-block">
+										<div class="main__input _name">
+											<input type="text" placeholder="ИМЯ">
 										</div>
-										<div class="call-back__radio-block">
-											<label for="call-back__radio" class="radio">
-												<input type="radio" name="" id="call-back__radio" class="call-back__radio-input">
-												<div class="radio-radio"></div>
-												<div class="call-back__policy policy">
-													Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
-												</div>
-											</label>
+										<div class="main__input _tel-number">
+											<input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
 										</div>
-										<button class="call-back__button btn">Заказать звонок</button>
-									</form>
-								</div>
+									</div>
+									<div class="call-back__radio-block">
+										<label for="call-back__radio" class="radio">
+											<input type="radio" name="" id="call-back__radio" class="call-back__radio-input">
+											<div class="radio-radio"></div>
+											<div class="call-back__policy policy">
+												Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
+											</div>
+										</label>
+									</div>
+									<button class="call-back__button btn">Заказать звонок</button>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -373,7 +367,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220111210924"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220111225446"></script>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -386,7 +380,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220111210924"></script>
+	<script src="js/app.min.js?_v=20220111225446"></script>
 </body>
 
 </html>
