@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220111073526">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220111210924">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220111210924" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -34,6 +34,9 @@
 						<div class="main__image-abs">
 							<picture><source srcset="img/main__bg_img.webp"type="image/webp"><img src="img/main__bg_img.png" alt=""></picture>
 						</div>
+						<div class="main__planet-abs">
+							<picture><source srcset="img/planet.webp"type="image/webp"><img src="img/planet.png" alt=""></picture>
+						</div>
 						<h1>ВСЕ ПРОВАЙДЕРЫ <br>
 							В ОДНОМ МЕСТЕ
 						</h1>
@@ -42,6 +45,13 @@
 							ПРОВЕРЬТЕ НАЛИЧИЕ <br>
 							ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ. <br>
 							ВЫБЕРИТЕ И ПОДКЛЮЧИТЕ ТАРИФНЫЙ ПЛАН <br>
+						</div>
+						<div class="main__text-mobile">
+							ВВЕДИТЕ НОМЕР ТЕЛЕФОНА<br>
+							МЫ — ПЕРЕЗВОНИМ ВАМ.<br>
+							ПРОВЕРИМ АДРЕС<br>
+							НА НАЛИЧИЕ ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ.<br>
+							ВЫБЕРЕМ И ПОДКЛЮЧИМ ИНТЕРНЕТ
 						</div>
 						<div class="main__form-block">
 							<form action="post">
@@ -75,9 +85,14 @@
 										<div class="main__policy policy">
 											Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
 										</div>
+										<div class="main__policy policy-mobile">
+											НАЖИМАЯ ПО КНОПКЕ «ПРОВЕРИТЬ АДРЕС», <br>
+											ВЫ СОГЛАШАЕТЕСЬ С УСЛОВИЯМИ <a href="#" class="policy-mobile__link-mobile">ОБРАБОТКИ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ</a>
+										</div>
 									</label>
 								</div>
 								<button class="main__button btn">ПРОВЕРИТЬ АДРЕС</button>
+								<button class="main__button btn _mobile">ПРОВЕРИТЬ</button>
 							</form>
 						</div>
 					</div>
@@ -100,12 +115,12 @@
 					<div class="benefits__body">
 						<h2>С НАМИ, ВЫ МОЖЕТЕ</h2>
 						<div class="benefits__items">
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Home"></div>
 								<div class="benefits__title">БЕСПЛАТНО</div>
 								<div class="benefits__text">ПОДБЕРЁТЕ СЕБЕ И БЛИЗКИМ КОМПАНИЮ, ТАРИФНЫЕ ПЛАНЫ, ОБОРУДОВАНИЕ, НЕ ВЫХОДЯ ИЗ ДОМА</div>
 							</div>
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Star"></div>
 								<div class="benefits__title">ЛЕГКО</div>
 								<div class="benefits__text">ВЫБЕРИТЕ НАПОЛНЕНИЕ
@@ -113,7 +128,7 @@
 									А ТАКЖЕ ВЫБЕРИТЕ ТОЛЬКО ТО,
 									ЧТО ВАЖНО ВАМ И ВАШЕЙ СЕМЬЕ</div>
 							</div>
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Time-Circle"></div>
 								<div class="benefits__title">БЫСТРО</div>
 								<div class="benefits__text">ПОДКЛЮЧИТЕ ИНТЕРНЕТ,
@@ -121,7 +136,7 @@
 									С УТРА, ПОСЛЕ РАБОТЫ,
 									ИЛИ НА ВЫХОДНЫХ</div>
 							</div>
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Game"></div>
 								<div class="benefits__title">УВЕРЕННО</div>
 								<div class="benefits__text">ПОКАЖЕТЕ СВОИ
@@ -129,7 +144,7 @@
 									НА ВЫСОКОМ УРОВНЕ,
 									ВМЕСТЕ С ИГРОВЫМ ТАРИФОМ</div>
 							</div>
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Graph"></div>
 								<div class="benefits__title">ПРАВИЛЬНО</div>
 								<div class="benefits__text">СЭКОНОМИТЕ СРЕДСТВА,
@@ -137,7 +152,7 @@
 									СРАВНИТЬ ТАРИФНЫЕ ПЛАНЫ
 									С НАШИМ СПЕЦИАЛИСТОМ</div>
 							</div>
-							<div class="benefits__item">
+							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-User"></div>
 								<div class="benefits__title">ТОЧНО</div>
 								<div class="benefits__text">ЗНАЕТЕ КОМУ ЗВОНИТЬ,
@@ -146,8 +161,58 @@
 									ЛИБО РЕШИТЬ ВОПРОС</div>
 							</div>
 						</div>
+						<div class="benefits__slider swiper">
+							<div class="benefits__wrapper swiper-wrapper">
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-Home"></div>
+									<div class="benefits__title">БЕСПЛАТНО</div>
+									<div class="benefits__text">ПОДБЕРЁТЕ СЕБЕ И БЛИЗКИМ<br> КОМПАНИЮ, ТАРИФНЫЕ ПЛАНЫ,<br> ОБОРУДОВАНИЕ,<br> НЕ ВЫХОДЯ ИЗ ДОМА</div>
+								</div>
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-Star"></div>
+									<div class="benefits__title">ЛЕГКО</div>
+									<div class="benefits__text">ВЫБЕРИТЕ НАПОЛНЕНИЕ
+										ТАРИФНОГО ПЛАНА,
+										А ТАКЖЕ ВЫБЕРИТЕ ТОЛЬКО ТО,
+										ЧТО ВАЖНО ВАМ И ВАШЕЙ СЕМЬЕ</div>
+								</div>
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-Time-Circle"></div>
+									<div class="benefits__title">БЫСТРО</div>
+									<div class="benefits__text">ПОДКЛЮЧИТЕ ИНТЕРНЕТ,
+										В ЛЮБОЕ УДОБНОЕ ВРЕМЯ,
+										С УТРА, ПОСЛЕ РАБОТЫ,
+										ИЛИ НА ВЫХОДНЫХ</div>
+								</div>
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-Game"></div>
+									<div class="benefits__title">УВЕРЕННО</div>
+									<div class="benefits__text">ПОКАЖЕТЕ СВОИ
+										ИГРОВЫЕ НАВЫКИ
+										НА ВЫСОКОМ УРОВНЕ,
+										ВМЕСТЕ С ИГРОВЫМ ТАРИФОМ</div>
+								</div>
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-Graph"></div>
+									<div class="benefits__title">ПРАВИЛЬНО</div>
+									<div class="benefits__text">СЭКОНОМИТЕ СРЕДСТВА,
+										ТАК КАК СМОЖЕТЕ
+										СРАВНИТЬ ТАРИФНЫЕ ПЛАНЫ
+										С НАШИМ СПЕЦИАЛИСТОМ</div>
+								</div>
+								<div class="benefits__item swiper-slide">
+									<div class="benefits__icon _icon-User"></div>
+									<div class="benefits__title">ТОЧНО</div>
+									<div class="benefits__text">ЗНАЕТЕ КОМУ ЗВОНИТЬ,
+										ЧТОБЫ ВАМ ПОМОГЛИ
+										РАЗОБРАТЬСЯ В ПРОБЛЕМЕ,
+										ЛИБО РЕШИТЬ ВОПРОС</div>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
 					</div>
-
 				</div>
 			</section>
 			<section class="partners">
@@ -177,6 +242,30 @@
 								<a href="#" class="partners__icon">
 									<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
 								</a>
+							</div>
+							<div class="partners__slider swiper">
+								<div class="partners__wrapper swiper-wrapper">
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+									<div class="partners__slide swiper-slide">
+										<a href="#"><picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture></a>
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
 							</div>
 						</div>
 					</div>
@@ -226,16 +315,16 @@
 												<input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
 											</div>
 										</div>
-										<div class="main__radio-block">
-											<label for="main__radio" class="radio">
-												<input type="radio" name="" id="main__radio" class="main__radio-input">
+										<div class="call-back__radio-block">
+											<label for="call-back__radio" class="radio">
+												<input type="radio" name="" id="call-back__radio" class="call-back__radio-input">
 												<div class="radio-radio"></div>
-												<div class="main__policy policy">
+												<div class="call-back__policy policy">
 													Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
 												</div>
 											</label>
 										</div>
-										<button class="main__button btn">Заказать звонок</button>
+										<button class="call-back__button btn">Заказать звонок</button>
 									</form>
 								</div>
 							</div>
@@ -248,9 +337,9 @@
 			<div class="footer__container">
 				<div class="footer__body">
 					<div class="footer__rules rules">
-						<div class="rules__title">ГЛАВНАЯ</div>
-						<a href="" class="rules__policy">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
-						<a href="" class="rules__privacy">ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИ</a>
+						<a href="#" class="rules__title">ГЛАВНАЯ</a>
+						<a href="#" class="rules__policy">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
+						<a href="#" class="rules__privacy">ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИ</a>
 						<div class="rules__agreement">ПРОДОЛЖАЯ ИСПОЛЬЗВАТЬ НАШ ВЕБ-САЙТ, <br>
 							ВЫ ПРЕДОСТАВЛЯЕТЕ СОГЛАСИЕ НА ОБРАБОТКУ <a href="#">КУКИ (COOKIES)</a> И ИНЫХ ПОЛЬЗОВАТЕЛЬСКИХ ДАННЫХ, <br>
 							В СООТВЕТСТВИИ С <a href="#">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И ИНЫМИ НОРМАТИВНЫМИ-ПРАВОВЫМИ АКТАМИ.
@@ -284,6 +373,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220111210924"></script>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -296,7 +386,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220111073526"></script>
+	<script src="js/app.min.js?_v=20220111210924"></script>
 </body>
 
 </html>
