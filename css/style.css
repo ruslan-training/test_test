@@ -1,0 +1,515 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Futura;
+  font-display: swap;
+  src: url("../fonts/FuturaDemiC Regular.woff2") format("woff2"), url("../fonts/FuturaDemiC Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: gothampro;
+  font-display: swap;
+  src: url("../fonts/gothampro.woff2") format("woff2"), url("../fonts/gothampro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: gothampro;
+  font-display: swap;
+  src: url("../fonts/gothampro_black.woff2") format("woff2"), url("../fonts/gothampro_black.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: gothampro;
+  font-display: swap;
+  src: url("../fonts/gothampro_medium.woff2") format("woff2"), url("../fonts/gothampro_medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: gothampro;
+  font-display: swap;
+  src: url("../fonts/gothampro_bold.woff2") format("woff2"), url("../fonts/gothampro_bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: gothampro;
+  font-display: swap;
+  src: url("../fonts/gothampro_light.woff2") format("woff2"), url("../fonts/gothampro_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-User:before {
+  content: "\e900";
+}
+
+._icon-Graph:before {
+  content: "\e901";
+}
+
+._icon-Game:before {
+  content: "\e902";
+}
+
+._icon-Time-Circle:before {
+  content: "\e903";
+}
+
+._icon-Home:before {
+  content: "\e904";
+}
+
+._icon-Call:before {
+  content: "\e905";
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #FFF;
+  line-height: 1;
+  font-family: "gothampro";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "gothampro";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper npm > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 68.75rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
+}
+
+.header {
+  background-color: #00A3FF;
+}
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5rem;
+}
+.header__phone {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.4s ease 0s;
+}
+.header__phone:before {
+  font-size: 1.875rem;
+  color: #FFF;
+  padding: 0px 1.25rem 0px 0px;
+}
+.header__phone:hover {
+  opacity: 0.5;
+  transition: all 0.4s ease 0s;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/
+.main__body {
+  position: relative;
+  padding: 2.5rem 0px 0px 0px;
+}
+.main__image-abs {
+  position: absolute;
+  max-width: 36.5625rem;
+  right: 0;
+  top: -40px;
+  z-index: -1;
+}
+.main__image-abs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main h1 {
+  font-weight: 900;
+  line-height: 2.375rem;
+  margin: 0px 0px 2.5rem 0px;
+  color: #00A3FF;
+}
+@media (min-width: 56.25em) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 56.25em) {
+  .main h1 {
+    font-size: clamp( 1.875rem , 0.625rem  +  3.3333333333vw , 2.5rem );
+  }
+}
+@media (max-width: 37.5em) {
+  .main h1 {
+    font-size: 1.875rem;
+  }
+}
+.main__text {
+  font-size: 1.25rem;
+  line-height: 1.1875rem;
+  color: #303030;
+  margin: 0px 0px 1.25rem 0px;
+}
+.main__input {
+  position: relative;
+  max-width: 16.875rem;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #0086CF;
+  border-radius: 0.625rem;
+  margin: 0px 0px 0.625rem 0px;
+}
+.main__input-short-block {
+  display: flex;
+  column-gap: 1.25rem;
+  margin: 0px 0px 0.625rem 0px;
+}
+.main__input._location, .main__input._street {
+  max-width: 32.5rem;
+}
+.main__input._house, .main__input._tel-number {
+  max-width: 15.625rem;
+}
+.main__input input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #FFF;
+  outline: none;
+  padding: 0 0 0 0.625rem;
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all 0.6s ease 0s;
+}
+
+.dropdown {
+  position: relative;
+  max-width: 16.875rem;
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #0086CF;
+  border-radius: 0.625rem;
+  margin: 0px 0px 0.625rem 0px;
+}
+.dropdown:before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%) rotate(45deg);
+  right: 1.25rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 1px solid #0086CF;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.4s ease 0s;
+  z-index: 2;
+}
+.dropdown__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #FFF;
+  outline: none;
+  padding: 0 0 0 0.625rem;
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: all 0.6s ease 0s;
+}
+.dropdown__option {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  background-color: #FFF;
+  border: 2px solid #0086CF;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.6s ease 0s;
+  z-index: 5;
+}
+.dropdown__item {
+  color: #303030;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0.625rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.dropdown__item:hover {
+  color: #FFF;
+  background-color: #0086CF;
+  transition: all 0.3s ease 0s;
+}
+
+.dropdown._active .dropdown__option {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.6s ease 0s;
+}
+
+.dropdown._active:before {
+  transform: rotate(225deg);
+}
+
+.dropdown._active .dropdown__item:first-child {
+  position: relative;
+}
+.dropdown._active .dropdown__item:first-child:before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%) rotate(45deg);
+  right: 1.25rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 1px solid #0086CF;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.4s ease 0s;
+  z-index: 2;
+}
+.dropdown._active .dropdown__item:first-child:hover:before {
+  border: 1px solid #FFF;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.main__radio-block {
+  display: flex;
+  align-items: center;
+}
+
+.main__radio-input {
+  display: none;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 0.9375rem 0px 0px;
+}
+
+.policy {
+  font-size: 0.4375rem;
+  font-weight: 400;
+  line-height: 0.4375rem;
+  color: #303030;
+}
+.policy__link {
+  font-weight: 700;
+  color: #00A3FF;
+}
+
+.radio-radio {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
+  border: 1px solid #0086CF;
+  margin: 0px 0.9375rem 0px 0px;
+  padding: 0.3125rem;
+}
+.radio-radio:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  background-color: #0086CF;
+  transform: scale(0);
+  z-index: 1;
+}
+
+.main__radio-input:checked > .radio-radio:after {
+  transform: scale(1);
+}
