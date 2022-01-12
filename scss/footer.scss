@@ -1,0 +1,130 @@
+//====================================================================================================
+.footer {
+    background-color: $semiDarkGrey;
+    padding: rem(60) 0px rem(15) 0px;
+    @include adaptiveValue("padding-top", 60, 30, 900, 767, 1);
+
+    &__body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    article h1 {
+        font-family: "Futura";
+        @include adaptiveValue("font-size", 60, 32, 1100, 900, 1);
+        line-height: rem(72);
+        font-weight: 700;
+        color: $mainColor;
+        @include adaptiveValue("margin-bottom", 40, 20, 1100, 900, 1);
+        text-align: right;
+    }
+    &__logo-box {
+        flex: 1 0 auto;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+    &__logo-box .contacts {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: rem(20);
+    }
+
+}
+.contacts {
+
+    &__title {
+        font-weight: 400;
+        font-size: rem(10);
+        line-height:rem(10);
+        text-align: right;
+        color: $semiFooterText;
+        text-transform: uppercase;
+        margin: 0px 0px rem(15) 0px;
+    }
+    &__phone, &__email {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 24, 18, 900, 768, 1);
+        line-height:rem(23);
+        text-align: right;
+        color: $mainColor;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: .5;
+            transition: all 0.4s ease 0s;
+        }
+    }
+    &__free-call, &__questions {
+        font-weight: 400;
+        font-size: rem(7);
+        line-height:rem(7);
+        text-align: right;
+        color: $semiFooterText;
+        text-transform: uppercase;
+        margin: rem(15) 0px 0px 0px;
+    }
+}
+.rules {
+    flex: 0 1 auto;
+
+    &__title {
+        display: flex;
+        font-weight: 900;
+        font-size: rem(20);
+        line-height: rem(72);
+        color: $mainColor;
+        margin: 0px 0px rem(22) 0px;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.4s ease 0s;
+        }
+    }
+    &__policy, &__privacy {
+        display: flex;
+        font-weight: 400;
+        font-size: rem(10);
+        line-height: rem(10);
+        color: $mainColor;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.4s ease 0s;
+        }
+    }
+    &__policy, &__privacy {
+        margin: 0px 0px rem(20) 0px;
+    }
+    &__agreement {
+        font-weight: 400;
+        font-size: rem(8);
+        line-height:rem(13);
+        color: $semiFooterText;
+        text-transform: uppercase;
+        margin: 0px 0px rem(10) 0px;
+    }
+    &__agreement a {
+        font-weight: 700;
+        color: $mainColor;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.4s ease 0s;
+        }
+    }
+    &__business-data {
+        font-weight: 300;
+        font-size: rem(7);
+        line-height:rem(12);
+        color: $semiFooterFop;
+
+    }
+     
+}
+//====================================================================================================

@@ -958,6 +958,11 @@ h2:before {
     display: block;
   }
 }
+@media (min-width: 320px) {
+  .policy-mobile {
+    margin: 0px 0px 0px 1.5625rem;
+  }
+}
 .policy-mobile__link-mobile {
   font-weight: 700;
   text-transform: uppercase;

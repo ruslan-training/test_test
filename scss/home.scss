@@ -1,0 +1,930 @@
+h2 {
+    font-weight: 900;
+    font-size: rem(40);
+    line-height: rem(38);
+    color: $mainColor;
+
+    &:before {
+        position: absolute;
+        content: '';
+        max-width: rem(75);
+        width: 100%;
+        height: rem(4);
+        left: calc(-75px - 15px);
+        top: calc(50% + 4px);
+        transform: translateY(calc(50% - 6px));
+    }
+        
+
+        @media (max-width: 767px) {
+        padding: 0px 0px 0px rem(25);
+        font-size: rem(24);
+
+       &:before {
+        position: absolute;
+        content: '';
+        left: -15px;
+        max-width: rem(25);
+        width: 100%;
+        height: rem(2);
+        top: calc(50% + 4px);
+        transform: translateY(calc(50% - 6px));
+    }
+    }
+}
+.btn {
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.main {
+    &__body {
+        position: relative;
+        padding: rem(40) 0px 0px;
+        @include adaptiveValue("padding-bottom", 90, 80, 900, 600, 1);
+    }
+    &__image-abs {
+        position: absolute;
+        max-width: rem(585);
+        right: 0;
+        top: -40px;
+        z-index: -1;
+
+        @media (max-width: 600px) {
+           display: none;
+        }
+    }
+    &__image-abs img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__planet-abs {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+            position: absolute;
+            top: rem(70);
+            right: rem(-108);
+            z-index: -1;
+        }
+    }
+    h1 {
+        font-weight: 900;
+        @include adaptiveValue("font-size", 40, 30, 900, 600, 1);
+        line-height: rem(38);
+        margin: 0px 0px rem(40) 0px;
+
+        color: $mainLightBlue;
+    }
+    &__text {
+        @include adaptiveValue("font-size", 20, 16, 1100, 600, 1);
+        line-height: rem(19);
+        color: $semiDarkGrey;
+        margin: 0px 0px rem(20) 0px;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+    &__text-mobile {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+            font-size: rem(16);
+            line-height: rem(15);
+            color: $semiDarkGrey;
+            margin: 0px 0px rem(20) 0px;
+        }
+
+    }
+    &__input {
+        position: relative;
+        max-width: rem(270);
+        width: 100%;
+        height: rem(40);
+        border: 1px solid $mainBorderBlue;
+        border-radius: rem(10);
+        margin: 0px 0px rem(10) 0px;
+    }
+    &__input-short-block {
+        display: flex;
+        column-gap: rem(20);
+        margin: 0px 0px rem(10) 0px;
+    }
+    &__input._location, &__input._street {
+        max-width: rem(520);
+
+        @media (max-width: 600px) {
+           display: none;
+        }
+    }
+    &__input._house, &__input._tel-number {
+        max-width: rem(250);
+    }
+    &__input._tel-number {
+        @media (max-width: 600px) {
+            max-width: rem(325);
+         }
+    }
+    &__input._house {   
+        @media (max-width: 600px) {
+            display: none;
+         }
+    }
+    &__input input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: $mainColor;
+        outline: none;
+        padding: 0 0 0 rem(10);
+
+        color: $semiDarkGrey;
+        font-size: rem(14);
+        font-weight: 400;
+        transition: all 0.6s ease 0s;
+    }
+    &__button {
+        max-width: rem(320);
+        width: 100%;
+        border-radius: rem(30);
+        background: linear-gradient(180deg, #0095E5 0%, #00A6FF 100%);
+
+        font-weight: 900;
+        @include adaptiveValue("font-size", 20, 12, 1100, 600, 1);
+        line-height: rem(19);
+        color: $mainColor;
+        text-transform: uppercase;
+        padding: rem(15) rem(57);
+        @include adaptiveValue("margin-left", 100, 15, 900, 600, 1);
+        transition: all 0.6s ease 0s;
+
+        @media (max-width: 600px) {
+            display: none;
+         }
+
+        &:hover {
+            background: linear-gradient(180deg, #01507A 0%, #006DA7 100%);
+            transition: all 0.6s ease 0s;
+        }
+    }
+    &__button._mobile {
+        font-size: rem(20);
+        line-height: rem(19);
+        text-transform: uppercase;
+        padding: rem(30) rem(57);
+        margin: 0px 0px 0px 0px;
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+        }
+        
+    }
+}
+//============================DROPDOWN MENU=============================================================
+.dropdown {
+    position: relative;
+    max-width: rem(270);
+    width: 100%;
+    height: rem(40);
+    border: 1px solid $mainBorderBlue;
+    border-radius: rem(10);
+    margin: 0px 0px rem(10) 0px;
+
+    
+    @media (max-width: 600px) {
+        display: none;
+     }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 45%;
+        transform: translateY(-45%) rotate(45deg);
+        right: rem(20);
+        width: rem(10);
+        height: rem(10);
+        border: 1px solid $mainBorderBlue;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        cursor: pointer;
+        pointer-events: none;
+
+        transition: all 0.4s ease 0s;
+
+        z-index: 2;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: $mainColor;
+        outline: none;
+        padding: 0 0 0 rem(10);
+
+        color: $semiDarkGrey;
+        font-size: rem(14);
+        font-weight: 400;
+        transition: all 0.6s ease 0s;
+    }
+
+    &__option {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: $mainColor;
+        border: 2px solid $mainBorderBlue;
+        border-radius: rem(10);
+        overflow: hidden;
+
+        visibility: hidden;
+        opacity: 0;
+
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        transition: all 0.6s ease 0s;
+        z-index: 5;
+    }
+
+    &__item {
+        color: $semiDarkGrey;
+        font-size: rem(14);
+        font-weight: 400;
+        text-transform: uppercase;
+
+        padding: rem(10);
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: $mainColor;
+            background-color: $mainBorderBlue;
+            transition: all 0.3s ease 0s;
+        }
+
+   
+    }
+}
+.dropdown._active .dropdown__option {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.6s ease 0s;
+}
+.dropdown._active {
+    &:before {
+        transform: rotate(225deg);
+    }
+}
+.dropdown._active .dropdown__item:first-child {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 45%;
+        transform: translateY(-45%) rotate(45deg);
+        right: rem(20);
+        width: rem(10);
+        height: rem(10);
+        border: 1px solid $mainBorderBlue;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        cursor: pointer;
+        pointer-events: none;
+
+        transition: all 0.4s ease 0s;
+
+        z-index: 2;
+    }
+    &:hover {
+        &:before{
+            border: 1px solid $mainColor;
+            border-top: 1px solid transparent;
+            border-left: 1px solid transparent;
+            transition: all 0.3s ease 0s;
+        }
+       
+    }
+}  
+//=====================RADIO===========================================================
+.main__radio-block {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px rem(15) 0px;
+}
+.main__radio-input {
+    display: none;
+}
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px rem(15) 0px 0px;
+}
+.policy {
+    font-size: rem(7);
+    font-weight: 400;
+    line-height: rem(7);
+    color: $semiDarkGrey;
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    &__link {
+        font-weight: 700;
+        color: $mainLightBlue;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+.policy-mobile {
+    font-weight: 400;
+    font-size: rem(6);
+    line-height: rem(6);
+    text-transform: uppercase;
+    color: $semiDarkGrey;
+    text-align: center;
+    display: none;
+
+    @media (max-width: 600px) {
+        display: block;
+    }
+
+    &__link-mobile {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $mainBlockBlue;
+    }   
+}
+.radio-radio {
+    width: rem(25);
+    height: rem(25);
+    border-radius: 50%;
+    border: 1px solid $mainBorderBlue;
+    margin: 0px rem(15) 0px 0px;
+    padding: rem(5);
+
+    @media (max-width: 600px) {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        background-color: $mainBorderBlue;
+        transform: scale(0);
+
+        z-index: 1;
+        transition: all 0.4s ease 0s;
+    }
+}
+.main__radio-input:checked + .radio-radio:after {
+    transform: scale(1);
+    transition: all 0.4s ease 0s;
+}
+//=====================ABOUT US===========================================================
+.about-us {
+    &__body {
+        position: relative;
+        background-color: $mainBlockBlue;
+        @include adaptiveValue("padding-top", 80, 50, 900, 600, 1);
+        @include adaptiveValue("padding-bottom", 50, 30, 900, 600, 1);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: calc(-50vw + 50%);
+            z-index: 1;
+            background-color: $mainBlockBlue;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            margin-right: calc(-50vw + 50%);
+            z-index: 1;
+            background-color: $mainBlockBlue;
+        }
+    }
+    &__text {
+        position: relative;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 20, 14, 1100, 600, 1);
+        line-height: rem(19);
+        color: $mainColor;
+        z-index: 3;
+    }
+}
+.about-us h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px rem(30) 0px;
+    z-index: 3;
+
+    &:before { 
+        background-color: $mainColor;
+    }
+}
+//=====================Benefits===========================================================
+.benefits {
+    &__body {
+        background-color: $mainColor;
+        @include adaptiveValue("padding-top", 100, 40, 900, 600, 1);
+        @include adaptiveValue("padding-bottom", 40, 30, 900, 600, 1);
+
+        @media (max-width: 767px) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        @include adaptiveValue("font-size", 20, 14, 1100, 600, 1);
+        line-height: rem(19);
+        text-transform: uppercase;
+        color: $mainColor;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: rem(40);
+        row-gap: rem(30);
+
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+    &__item {
+        border: 2px solid $mainBlockBlue;
+        border-radius: rem(30);
+        @include adaptiveValue("padding", 30, 15, 1100, 900, 1);
+    }
+    &__icon {
+        display: inline-block;
+        margin: 0px 0px rem(13) 0px;
+
+        &:before {
+            color: $mainBlockBlue; 
+            font-size: rem(40);
+        }
+    }
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 20, 14, 1100, 600, 1);
+        line-height: rem(19);
+        text-transform: uppercase;
+        color: $semiTextDarkGrey;
+        margin: 0px 0px rem(9) 0px;
+    }
+    &__text {
+        max-width: rem(280);
+        width: 100%;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 14, 12, 1100, 600, 1);
+        line-height: rem(20);
+        text-transform: uppercase;
+        color: $semiTextDarkGrey;
+        margin: 0px 0px rem(9) 0px;
+    }
+    &__slider {
+        display: none;
+
+        @media (max-width:767px) {
+            display: flex;
+        }
+    }
+    &__slider .benefits__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        text-align: center;
+    }
+}
+.benefits h2 {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 0px rem(50) 0px;
+    color: $mainBlockBlue;
+
+    &:before {
+        background-color: $mainBlockBlue;
+    }
+}
+.swiper {
+    position: relative;
+}
+.swiper-wrapper > .swiper-slide {
+    padding: 0;
+}
+.swiper > .swiper-button-next {
+    position: absolute;
+    top: 42%;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $semiSliderArrowColor;
+    opacity: 0.25;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        width: 8px;
+        height: 8px;
+        transform: translate(-40%, -50%) rotate(-45deg);
+        right: rem(13);
+        border: 1px solid $semiSliderArrowColor;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+    }
+}
+.swiper > .swiper-button-prev {
+    position: absolute;
+    top: 42%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $semiSliderArrowColor;
+    opacity: 0.25;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        width: 8px;
+        height: 8px;
+        transform: translate(-60%, -50%) rotate(-225deg);
+        right: rem(13);
+        border: 1px solid $semiSliderArrowColor;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+    }
+}
+//=====================PARTNERS==========================================================
+.partners {
+    &__body {
+        position: relative;
+        background-color: $mainColor;
+        @include adaptiveValue("padding-top", 100, 40, 900, 600, 1);
+        @include adaptiveValue("padding-bottom", 90, 30, 900, 600, 1);
+        z-index: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: calc(-50vw + 50%);
+            z-index: -1;
+            background-color: $mainColor;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            margin-right: calc(-50vw + 50%);
+            z-index: -1;
+            background-color: $mainColor;
+        }
+    }
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue("column-gap", 50, 20, 1100, 900, 1);
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    &__icon {
+        max-width: 115px;
+        width: 100%;
+        height: 40px;
+        position: relative;
+        padding: 0px 0px 10% 0px;
+    }
+    &__icon img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__slider {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+    &__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.partners h2 {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 0px rem(50) 0px;
+    color: $mainBlockBlue;
+
+    &:before {
+        background-color: $mainBlockBlue;
+    }
+}
+.partners .swiper > .swiper-button-next {
+    top: 74%;
+    transform: translateY(-74%);
+}
+.partners .swiper > .swiper-button-prev {
+    top: 74%;
+    transform: translateY(-74%);
+}
+//=====================Stages==========================================================
+.stages {
+    
+    @media (max-width:767px) {
+        display: none;
+    }
+
+    &__body {
+        position: relative;
+        background-color: $mainBlockBlue;
+        @include adaptiveValue("padding-top", 80, 50, 900, 600, 1);
+        @include adaptiveValue("padding-bottom", 50, 30, 900, 600, 1);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: calc(-50vw + 50%);
+            z-index: 1;
+            background-color: $mainBlockBlue;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            margin-right: calc(-50vw + 50%);
+            z-index: 1;
+            background-color: $mainBlockBlue;
+        }
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        @include adaptiveValue("column-gap", 40, 15, 1100, 900, 1);
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 2px solid $mainColor;
+        border-radius: 30px;
+        @include adaptiveValue("padding-top", 30, 15, 1100, 900, 1);
+        @include adaptiveValue("padding-bottom", 30, 15, 1100, 900, 1);
+        @include adaptiveValue("padding-left", 35, 20, 1100, 900, 1);
+        @include adaptiveValue("padding-right", 35, 20, 1100, 900, 1);
+        z-index: 3;
+    }
+    &__title {
+        position: relative;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 40, 26, 1100, 900, 1);
+        line-height: rem(38);
+        text-transform: uppercase;
+        color: $mainColor;
+        @include adaptiveValue("padding-right", 25, 15, 1100, 900, 1);
+        border-right: 2px solid $mainColor;
+        z-index: 3;
+    }
+    &__text {
+        flex: 1 1 auto;
+        position: relative;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 14, 12, 1100, 900, 1);
+        line-height: rem(13);
+        text-transform: uppercase;
+        color: $mainColor;
+        @include adaptiveValue("padding-left", 25, 15, 1100, 900, 1);
+        z-index: 3;
+    }
+}
+.stages h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px rem(60) 0px;
+    z-index: 3;
+
+    &:before {
+        background-color: $mainColor;
+    }
+}
+//=====================Call-back==========================================================
+.call-back {
+    @media (max-width:767px) {
+        display: none;
+    }
+
+    &__body {
+        position: relative;
+        background-color: $mainColor;
+        @include adaptiveValue("padding-top", 100, 40, 900, 600, 1);
+        @include adaptiveValue("padding-bottom", 90, 30, 900, 600, 1);
+        z-index: 1;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin-left: calc(-50vw + 50%);
+            z-index: -1;
+            background-color: $mainColor;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            margin-right: calc(-50vw + 50%);
+            z-index: -1;
+            background-color: $mainColor;
+        }
+    }
+    &__form-block {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @include adaptiveValue("font-size", 20, 15, 1100, 900, 1);
+    }
+    &__text {
+        flex: 1 1 auto;
+        font-weight: 400;
+        @include adaptiveValue("font-size", 20, 12, 1100, 900, 1);
+        line-height: rem(26);
+        color: $semiDarkGrey;
+    }
+    &__text span {
+        font-weight: 700;
+        color: $semiTextDarkGrey;
+    }
+    &__text a {
+        font-weight: 700;
+        color: $mainBlockBlue;
+    }
+    &__button {
+        max-width: rem(320);
+        width: 100%;
+        border-radius: rem(30);
+        background: linear-gradient(180deg, #0095E5 0%, #00A6FF 100%);
+
+        font-weight: 900;
+        @include adaptiveValue("font-size", 20, 12, 1100, 600, 1);
+        line-height: rem(19);
+        color: $mainColor;
+        text-transform: uppercase;
+        padding: rem(15) rem(57);
+        @include adaptiveValue("margin-left", 100, 15, 900, 600, 1);
+        transition: all 0.6s ease 0s;
+
+        &:hover {
+            background: linear-gradient(180deg, #01507A 0%, #006DA7 100%);
+            transition: all 0.6s ease 0s;
+        }
+    }
+}
+.call-back h2 {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 0px rem(50) 0px;
+    color: $mainBlockBlue;
+
+    &:before {
+        background-color: $mainBlockBlue;
+    }
+}
+.call-back .main__form-block {
+    flex: 1 0 50%;
+}
+//======================RADIO======================================
+.call-back__radio-block {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px rem(15) 0px;
+}
+.call-back__radio-input {
+    display: none;
+}
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px rem(15) 0px 0px;
+}
+.policy {
+    font-size: rem(7);
+    font-weight: 400;
+    line-height: rem(7);
+    color: $semiDarkGrey;
+
+    &__link {
+        font-weight: 700;
+        color: $mainLightBlue;
+    }
+}
+.radio-radio {
+    width: rem(25);
+    height: rem(25);
+    border-radius: 50%;
+    border: 1px solid $mainBorderBlue;
+    margin: 0px rem(15) 0px 0px;
+    padding: rem(5);
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        background-color: $mainBorderBlue;
+        transform: scale(0);
+
+        z-index: 1;
+        transition: all 0.4s ease 0s;
+    }
+}
+.call-back__radio-input:checked + .radio-radio:after {
+    transform: scale(1);
+    transition: all 0.4s ease 0s;
+}

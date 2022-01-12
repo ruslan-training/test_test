@@ -1,5 +1,13 @@
 (() => {
   "use strict";
+  !(function (e) {
+    let t = document.querySelector(".dropdown__input");
+    document.querySelectorAll(".dropdown__item").forEach((e, n) => {
+      e.addEventListener("click", function (n) {
+        t.value = e.textContent;
+      });
+    });
+  })();
   let e = document.querySelectorAll(".dropdown");
   for (let t of e)
     t.addEventListener("click", () => {
