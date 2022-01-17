@@ -1812,7 +1812,6 @@ h2:before {
   width: 100%;
 }
 .call-back__text {
-  flex: 0 0 300px;
   font-weight: 400;
   line-height: 1.625rem;
   color: #303030;
@@ -1830,6 +1829,11 @@ h2:before {
 @media (max-width: 56.25em) {
   .call-back__text {
     font-size: 0.75rem;
+  }
+}
+@media (max-width: 1100px) {
+  .call-back__text {
+    flex: 0 0 300px;
   }
 }
 .call-back__text span {
