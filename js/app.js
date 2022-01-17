@@ -36,13 +36,21 @@
       autoplay: { delay: 3200 },
       slidesPerView: 3,
       breakpoints: {
-        320: { slidesPerView: 2, spaceBetween: 20 },
-        580: { slidesPerView: 3, spaceBetween: 30 },
+        320: { slidesPerView: 2, spaceBetween: 10 },
+        580: { slidesPerView: 3, spaceBetween: 10 },
+        767: { slidesPerView: 4, spaceBetween: 10 },
+        900: { slidesPerView: 5, spaceBetween: 10 },
+        900: { slidesPerView: 5, spaceBetween: 10 },
       },
     });
-  let t = !1;
+  let t = document.querySelectorAll(".radio-radio");
+  for (let e of t)
+    e.addEventListener("click", () => {
+      e.classList.toggle("_active");
+    });
+  let n = !1;
   setTimeout(() => {
-    if (t) {
+    if (n) {
       let e = new Event("windowScroll");
       window.addEventListener("scroll", function (t) {
         document.dispatchEvent(e);

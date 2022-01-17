@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220112093631">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220112093631" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220117191155">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220117191155" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,10 +32,15 @@
 				<div class="page__container">
 					<div class="main__body">
 						<div class="main__image-abs">
-							<picture><source srcset="img/main__bg_img.webp"type="image/webp"><img src="img/main__bg_img.png" alt=""></picture>
-						</div>
-						<div class="main__planet-abs">
-							<picture><source srcset="img/planet.webp"type="image/webp"><img src="img/planet.png" alt=""></picture>
+							<div class="main__abs-moon">
+								<img src="img/moon.svg" alt="">
+							</div>
+							<div class="main__abs-man">
+								<img src="img/man.svg" alt="">
+							</div>
+							<div class="main__abs-planet">
+								<img src="img/planet.svg" alt="">
+							</div>
 						</div>
 						<h1>ВСЕ ПРОВАЙДЕРЫ <br>
 							В ОДНОМ МЕСТЕ
@@ -50,7 +55,8 @@
 							ВВЕДИТЕ НОМЕР ТЕЛЕФОНА<br>
 							МЫ — ПЕРЕЗВОНИМ ВАМ.<br>
 							ПРОВЕРИМ АДРЕС<br>
-							НА НАЛИЧИЕ ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ.<br>
+							НА НАЛИЧИЕ<br>
+							ТЕХНИЧЕСКОЙ ВОЗМОЖНОСТИ.<br>
 							ВЫБЕРЕМ И ПОДКЛЮЧИМ ИНТЕРНЕТ
 						</div>
 						<div class="main__form-block">
@@ -75,7 +81,7 @@
 										<input type="text" placeholder="ДОМ">
 									</div>
 									<div class="main__input _tel-number">
-										<input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+										<input type="number" placeholder="НОМЕР ТЕЛЕФОНА">
 									</div>
 								</div>
 								<div class="main__radio-block">
@@ -116,46 +122,55 @@
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Home"></div>
 								<div class="benefits__title">БЕСПЛАТНО</div>
-								<div class="benefits__text">ПОДБЕРЁТЕ СЕБЕ И БЛИЗКИМ КОМПАНИЮ, ТАРИФНЫЕ ПЛАНЫ, ОБОРУДОВАНИЕ, НЕ ВЫХОДЯ ИЗ ДОМА</div>
+								<div class="benefits__text">
+									ПОДБЕРЁТЕ СЕБЕ И БЛИЗКИМ<br>
+									КОМПАНИЮ, ТАРИФНЫЕ ПЛАНЫ,<Br>
+									ОБОРУДОВАНИЕ,<Br>
+									НЕ ВЫХОДЯ ИЗ ДОМА</div>
 							</div>
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Star"></div>
 								<div class="benefits__title">ЛЕГКО</div>
-								<div class="benefits__text">ВЫБЕРИТЕ НАПОЛНЕНИЕ
-									ТАРИФНОГО ПЛАНА,
-									А ТАКЖЕ ВЫБЕРИТЕ ТОЛЬКО ТО,
+								<div class="benefits__text">
+									ВЫБЕРИТЕ НАПОЛНЕНИЕ<br>
+									ТАРИФНОГО ПЛАНА, <br>
+									А ТАКЖЕ ВЫБЕРИТЕ ТОЛЬКО ТО,<br>
 									ЧТО ВАЖНО ВАМ И ВАШЕЙ СЕМЬЕ</div>
 							</div>
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Time-Circle"></div>
 								<div class="benefits__title">БЫСТРО</div>
-								<div class="benefits__text">ПОДКЛЮЧИТЕ ИНТЕРНЕТ,
-									В ЛЮБОЕ УДОБНОЕ ВРЕМЯ,
-									С УТРА, ПОСЛЕ РАБОТЫ,
+								<div class="benefits__text">
+									ПОДКЛЮЧИТЕ ИНТЕРНЕТ,<br>
+									В ЛЮБОЕ УДОБНОЕ ВРЕМЯ,<Br>
+									С УТРА, ПОСЛЕ РАБОТЫ,<Br>
 									ИЛИ НА ВЫХОДНЫХ</div>
 							</div>
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Game"></div>
 								<div class="benefits__title">УВЕРЕННО</div>
-								<div class="benefits__text">ПОКАЖЕТЕ СВОИ
-									ИГРОВЫЕ НАВЫКИ
-									НА ВЫСОКОМ УРОВНЕ,
+								<div class="benefits__text">
+									ПОКАЖЕТЕ СВОИ <br>
+									ИГРОВЫЕ НАВЫКИ <br>
+									НА ВЫСОКОМ УРОВНЕ,<Br>
 									ВМЕСТЕ С ИГРОВЫМ ТАРИФОМ</div>
 							</div>
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-Graph"></div>
 								<div class="benefits__title">ПРАВИЛЬНО</div>
-								<div class="benefits__text">СЭКОНОМИТЕ СРЕДСТВА,
-									ТАК КАК СМОЖЕТЕ
-									СРАВНИТЬ ТАРИФНЫЕ ПЛАНЫ
+								<div class="benefits__text">
+									СЭКОНОМИТЕ СРЕДСТВА,<br>
+									ТАК КАК СМОЖЕТЕ <Br>
+									СРАВНИТЬ ТАРИФНЫЕ ПЛАНЫ<br>
 									С НАШИМ СПЕЦИАЛИСТОМ</div>
 							</div>
 							<div class="benefits__item slide">
 								<div class="benefits__icon _icon-User"></div>
 								<div class="benefits__title">ТОЧНО</div>
-								<div class="benefits__text">ЗНАЕТЕ КОМУ ЗВОНИТЬ,
-									ЧТОБЫ ВАМ ПОМОГЛИ
-									РАЗОБРАТЬСЯ В ПРОБЛЕМЕ,
+								<div class="benefits__text">
+									ЗНАЕТЕ КОМУ ЗВОНИТЬ,<br>
+									ЧТОБЫ ВАМ ПОМОГЛИ<br>
+									РАЗОБРАТЬСЯ В ПРОБЛЕМЕ,<br>
 									ЛИБО РЕШИТЬ ВОПРОС</div>
 							</div>
 						</div>
@@ -217,29 +232,6 @@
 				<div class="page__container">
 					<div class="partners__body">
 						<h2>С НАМИ, ПРОВАЙДЕРЫ</h2>
-						<div class="partners__icons">
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-							<a href="#" class="partners__icon">
-								<picture><source srcset="img/partners.webp"type="image/webp"><img src="img/partners.png" alt=""></picture>
-							</a>
-						</div>
 						<div class="partners__slider swiper">
 							<div class="partners__wrapper swiper-wrapper">
 								<div class="partners__slide swiper-slide">
@@ -300,24 +292,20 @@
 								МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ <span>30 МИНУТ.</span><br>
 								В ИНОМ СЛУЧАЕ — <a href="#"> МЕСЯЦ В ПОДАРОК!</a>
 							</div>
-							<div class="main__form-block">
-								<form action="post">
-									<div class="main__input-short-block">
-										<div class="main__input _name">
+							<div class="call-back__forms">
+								<form action="post" class="call-back__form">
+									<div class="call-back__input-short-block">
+										<div class="call-back__input _name">
 											<input type="text" placeholder="ИМЯ">
 										</div>
-										<div class="main__input _tel-number">
-											<input type="text" placeholder="НОМЕР ТЕЛЕФОНА">
+										<div class="call-back__input _tel-number">
+											<input type="number" placeholder="НОМЕР ТЕЛЕФОНА">
 										</div>
 									</div>
 									<div class="call-back__radio-block">
-										<label for="call-back__radio" class="radio">
-											<input type="radio" name="" id="call-back__radio" class="call-back__radio-input">
-											<div class="radio-radio"></div>
-											<div class="call-back__policy policy">
-												Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
-											</div>
-										</label>
+										<div class="call-back__policy policy">
+											Я ОЗНАКОМЛЕН С <a href="" class="policy__link">ПОЛИТИКОЙ КОНФЕДЕНЦИАЛЬНОСТИ</a> И СОГЛАСЕН(-НА) С<br> <a href="" class="policy__link">УСЛОВИЯМИ ОБРАБОТКИ ДАННЫХ</a>
+										</div>
 									</div>
 									<button class="call-back__button btn">Заказать звонок</button>
 								</form>
@@ -367,7 +355,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220112093631"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220117191155"></script>
 	<!-- 
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -380,7 +368,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220112093631"></script>
+	<script src="js/app.min.js?_v=20220117191155"></script>
 </body>
 
 </html>
