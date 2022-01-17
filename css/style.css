@@ -1831,9 +1831,19 @@ h2:before {
     font-size: 0.75rem;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1100px) and (min-width: 68.75em) {
   .call-back__text {
-    flex: 0 0 300px;
+    width: 29.375rem;
+  }
+}
+@media (max-width: 1100px) and (min-width: 56.25em) and (max-width: 68.75em) {
+  .call-back__text {
+    width: clamp( 22.8125rem , -6.71875rem  +  52.5vw , 29.375rem );
+  }
+}
+@media (max-width: 1100px) and (max-width: 56.25em) {
+  .call-back__text {
+    width: 22.8125rem;
   }
 }
 .call-back__text span {
